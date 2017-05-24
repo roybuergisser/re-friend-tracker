@@ -2,7 +2,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "Requirements Engineering Friend Tracker",
+            "title": "Roys Friend Tracker",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -22,6 +22,22 @@ export class GuiModel {
                             "width": 1,
                             "required": true
                         },
+						{
+							 "id": "nickname",
+							 "type": "text",
+							 "name": "Nickname",
+							 "width": 2,
+							 "required": true
+						},
+						{
+							 "id": "group",
+							 "type": "autocomplete",
+							 "name": "Group",
+							 "data": [ "Study", "Family", "School" ],
+							 "form": "GroupForm",
+							 "width": 2
+						},
+
                         {
                             "id":   "location",
                             "type": "autocomplete",
@@ -58,6 +74,31 @@ export class GuiModel {
                         }
                     ]
                 },
+				{
+					 "id": "GroupForm",
+					 "title": "Group",
+					 "formFieldList": [
+						{
+							 "id": "name",
+							 "type": "text",
+							 "name": "GroupName",
+							 "width": 2,
+							 "required": true
+						},
+						{
+							 "type": "deleteButton",
+							 "name": "Delete"
+						},
+						{
+							 "type": "cancelButton",
+							 "name": "Cancel"
+						},
+						{
+							 "type": "okButton",
+							 "name": "Ok"
+						}
+					]
+				},
                 {
                     "id": "LocationForm",
                     "title": "Location",
@@ -103,8 +144,42 @@ export class GuiModel {
                             "color": "yellow",
                             "page": "locationspage",
                         },
+						{
+							 "type": "button",
+							 "name": "Groups",
+							 "icon": "fa-weixin",
+							 "color": "wisteria",
+							 "page": "groupspage",
+						},
                     ]
                 },
+				{
+					"id": "groupspage",
+					"elementList": [
+						{
+							"type": "backbutton",
+						},
+						{
+							 "type": "newButton",
+							 "name": "NewGroup",
+							 "icon": "fa-weixin",
+							 "color": "green",
+							 "form": {
+								"form": "GroupForm"
+							}
+						}
+						{
+							"type": "list",
+							"icon": "fa-weixin",
+							"color": "wisteria",
+							"search": true,
+							"data": [ { name: "Study" }, { name: "Family" }, { name: "School"} ],
+							"form": {
+								"form": "GroupForm"
+							}
+						},
+					]
+				},
                 {
                     "id": "friendspage",
                     "elementList": [
