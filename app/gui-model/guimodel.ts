@@ -253,7 +253,7 @@ export class GuiModel {
 							"icon": "fa-calendar",
 							"color": "carrot",
 							"search": true,
-							"data": [ { name: "Movie Ted2" }, { name: "Eating Pizza" }, { name: "Skidiving"} ],
+							"data": [ { name: "Movie Ted" }, { name: "Eating Pizza" }, { name: "Playing Golf"} ],
 							"form": {
 							"form": "ActivityForm"
 							}
@@ -307,7 +307,7 @@ export class GuiModel {
                                 "icon": "fa-home",
                                 "color": "blue",
                                 "search": true,
-                                "data": [{ name: "Adelboden" }, { name: "Winterthur" }, { name: "Zinal" }, { name: "Zürich" }],
+                                "data": [{ name: "Adelboden" }, { name: "Winterthur" }, { name: "Genf" }, { name: "Zürich" }],
                                 "form": {
                                     "form": "LocationForm"
                                 }
