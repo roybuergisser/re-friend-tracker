@@ -167,7 +167,7 @@ export class GuiModel {
 							 "form": {
 								"form": "GroupForm"
 							}
-						}
+						},
 						{
 							"type": "list",
 							"icon": "fa-weixin",
